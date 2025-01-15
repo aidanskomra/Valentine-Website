@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.background img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.container {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black; /* Black text color for readability on white background */
+    padding: 30px;
+    border-radius: 15px;
+    background-color: white;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+}
+
+.header_text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.message {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+/* Separate Box for the Timer */
+.timer-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.timer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow for floating effect */
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+}
+
+#countdown {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF69B4; /* Soft pink color */
+    animation: fadeIn 3s ease-out; /* Smooth fade-in effect */
+}
+
+
+.btn {
+    background-color: white;
+    color: red;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}

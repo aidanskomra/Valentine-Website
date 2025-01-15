@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./yes_style.css">
+    </head> 
+    <body>
+        <div class="background">
+            <img src="./1.jpg" alt="Image 1">
+            <img src="./2.jpg" alt="Image 2">
+            <img src="./3.jpg" alt="Image 3">
+            <img src="./4.jpg" alt="Image 4">
+            <img src="./5.jpg" alt="Image 5">
+            <img src="./6.jpg" alt="Image 6">
+            <img src="./7.jpg" alt="Image 7">
+            <img src="./8.jpg" alt="Image 8">
+            <img src="./9.jpg" alt="Image 9">
+            <img src="./10.jpg" alt="Image 10">
+            <img src="./11.jpg" alt="Image 11">
+            <img src="./12.jpg" alt="Image 12">
+            <img src="./13.jpg" alt="Image 13">
+            <img src="./14.jpg" alt="Image 14">
+            <img src="./15.jpg" alt="Image 15">
+        </div>
+        <div class="container">
+            <div class="header_text">
+                YIPEEEEEEE!!! 
+            </div>
+            <div class="message">
+                I can't wait to spend Valentine's Day with the love of my life. I have been looking forward to this day ever since we first started dating, and I feel so incredibly lucky to have you by my side. Every moment we've shared together has been amazing, and I cherish every single second. You are my happiness, and the person I want to spend forever with. I can’t imagine my life without you, and I can’t wait for all the beautiful moments that are yet to come.
+                <br><br>
+                I love you more than words can ever express! 💖💖💖 :)
+            </div>
+
+            <!-- Separate Timer Box -->
+        <div class="timer-container">
+            <div class="timer">
+                <h2>Time left until Valentine's Day:</h2>
+                <p id="countdown"></p>
+            </div>
+        </div>
+
+        <script>
+            // Set Valentine's Day date
+            const valentinesDay = new Date('2025-02-14T00:00:00').getTime();
+
+            // Update the countdown every 1 second
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = valentinesDay - now;
+                
+                // Time calculations for days, hours, minutes, and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result
+                document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                // If the countdown is over, display a message
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById('countdown').innerHTML = "It's Valentine's Day! 💖";
+                }
+            }, 1000);
+        </script>
+        </div>
+    </body> 
+</html>

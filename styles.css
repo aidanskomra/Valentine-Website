@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: top 0.5s ease, left 0.5s ease; /* Smooth transitions for movement */
+    z-index: 2; /* Ensure the button is above the background */
+}
+
+.background img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.container {
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header_text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase; /* Make the text more impactful */
+    color: white;
+    letter-spacing: 2px;
+}
+
+.question_text {
+    font-family: 'Dancing Script', cursive; /* Adding a handwritten, romantic font */
+    font-size: 50px;
+    font-weight: bold;
+    color: #FF69B4; /* Soft pink color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    animation: fadeIn 3s ease-out; /* Smooth fade-in effect */
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: white;
+    color: red;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}

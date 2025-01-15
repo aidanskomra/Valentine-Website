@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="background">
+        <img src="./1.jpg" alt="Image 1">
+        <img src="./2.jpg" alt="Image 2">
+        <img src="./3.jpg" alt="Image 3">
+        <img src="./4.jpg" alt="Image 4">
+        <img src="./5.jpg" alt="Image 5">
+        <img src="./6.jpg" alt="Image 6">
+        <img src="./7.jpg" alt="Image 7">
+        <img src="./8.jpg" alt="Image 8">
+        <img src="./9.jpg" alt="Image 9">
+        <img src="./10.jpg" alt="Image 10">
+        <img src="./11.jpg" alt="Image 11">
+        <img src="./12.jpg" alt="Image 12">
+        <img src="./13.jpg" alt="Image 13">
+        <img src="./14.jpg" alt="Image 14">
+        <img src="./15.jpg" alt="Image 15">
+    </div>
+    <div class="container">
+        <h1 class="header_text">Hi Baby!!! I have a question!!!!</h1>
+        <h1 class="question_text">Will You Be My Valentine?</h1>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            var noButton = document.getElementById('noButton');
+            var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
